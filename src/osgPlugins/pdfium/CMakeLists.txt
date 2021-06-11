@@ -1,0 +1,14 @@
+SET(TARGET_SRC
+    testing/utils/file_util.cpp
+    ReaderWriterPDFium.cpp
+)
+
+INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR})
+
+INCLUDE_DIRECTORIES(${PDFium_INCLUDE_DIR})
+SET(TARGET_EXTERNAL_LIBRARIES ${PDFium_LIBRARIES})
+
+SET(TARGET_ADDED_LIBRARIES osgWidget)
+
+#### end var setup  ###
+SETUP_PLUGIN(pdfium)
